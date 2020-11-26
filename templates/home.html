@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Home Page yea</h1>
+    <a href="/about">got to about</a>
+    {% for post in posts %}
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.author }} on <i>{{ post.date_posted }}</i></p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+{% endblock content %}
